@@ -104,19 +104,12 @@ class UserController {
 				);
 			} else {
 				$this->response = array(
-									'status' => false,
-									'message' => 'Something went wrong!',
-									'data' => array(
-												'error' => $result['error_message'],
-											),
-								);
+					'status' => true,
+					'message' => 'User fetched successfully',
+					'data' => $result,
+				);
 			}
 
-			$this->response = array(
-				'status' => true,
-				'message' => 'User fetched successfully',
-				'data' => $result,
-			);
 
 		} else {
 			$this->response = array(
